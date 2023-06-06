@@ -19,8 +19,8 @@ cd TriD
 ```
 
 ### Data Preparation
-[Prostate Segmentation](https://liuquande.github.io/SAML/)<br />
 [OD/OC Segmentation](https://zenodo.org/record/8009107)
+[Prostate Segmentation](https://liuquande.github.io/SAML/)<br />
 
 ### OD/OC Segmentation
 We take the scenario using BinRushed (target domain) and other four datasets (source domains) as the example.
