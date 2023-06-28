@@ -199,7 +199,6 @@ class Train:
                     last_name = path
 
                 x, y = Variable(x).to(self.device), Variable(y).to(self.device)
-
                 seg_logit = test_model(x)
                 seg_output = torch.nn.Sigmoid()(seg_logit)
 
@@ -211,15 +210,20 @@ class Train:
 
                     del seg_output3D
                     del y3D
-                else:
-                    try:
-                        seg_output3D = torch.cat((seg_output.unsqueeze(2).detach().cpu(), seg_output3D), 2)
-                        y3D = torch.cat((y.unsqueeze(2).detach().cpu(), y3D), 2)
-                    except:
-                        seg_output3D = seg_output.unsqueeze(2).detach().cpu()
-                        y3D = y.unsqueeze(2).detach().cpu()
+
+                try:
+                    seg_output3D = torch.cat((seg_output.unsqueeze(2).detach().cpu(), seg_output3D), 2)
+                    y3D = torch.cat((y.unsqueeze(2).detach().cpu(), y3D), 2)
+                except:
+                    seg_output3D = seg_output.unsqueeze(2).detach().cpu()
+                    y3D = y.unsqueeze(2).detach().cpu()
                 last_name = current_name
 
+        # Calculate the last 3D volume
+        metrics = calculate_metrics(seg_output3D, y3D)
+        for i in range(len(metrics)):
+            metrics_y[i].append(metrics[i])
+        
         test_metrics_y = np.mean(metrics_y, axis=1)
         return test_metrics_y[0], test_metrics_y[1]
 
