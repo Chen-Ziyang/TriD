@@ -430,7 +430,7 @@ def asd_compute(test, reference):
 def dice_metric(pred, label):
     batch_size = pred.shape[0]
     disc_dices, cup_dices = [], []
-    smooth = 1
+    smooth = 1e-6
 
     for batch in range(batch_size):
         disc_intersection = (pred[batch][0] * label[batch][0]).sum()
