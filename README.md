@@ -49,10 +49,12 @@ Part of the code is revised from the Pytorch implementation of [DoCR](https://gi
 
 If you find this repo useful for your research, please consider citing the paper as follows:
 ```
-@article{chen2023treasure,
-  title={Treasure in Distribution: A Domain Randomization based Multi-Source Domain Generalization for 2D Medical Image Segmentation},
+@inproceedings{chen2023treasure,
+  title={Treasure in distribution: a domain randomization based multi-source domain generalization for 2d medical image segmentation},
   author={Chen, Ziyang and Pan, Yongsheng and Ye, Yiwen and Cui, Hengfei and Xia, Yong},
-  booktitle={Medical Image Computing and Computer Assisted Intervention -- MICCAI 2023},
-  year={2023}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={89--99},
+  year={2023},
+  organization={Springer}
 }
 ```
