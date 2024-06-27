@@ -15,7 +15,7 @@ Pytorch 1.8.0
 * Clone this repo
 ```
 git clone https://github.com/Chen-Ziyang/TriD.git
-cd TriD
+cd TriD/TriD-master
 ```
 
 ### Data Preparation
