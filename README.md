@@ -53,6 +53,7 @@ If you find this repo useful for your research, please consider citing the paper
   title={Treasure in distribution: a domain randomization based multi-source domain generalization for 2d medical image segmentation},
   author={Chen, Ziyang and Pan, Yongsheng and Ye, Yiwen and Cui, Hengfei and Xia, Yong},
   booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  volume={14223},
   pages={89--99},
   year={2023},
   organization={Springer}
