@@ -6,8 +6,13 @@ This is the official pytorch implementation of our MICCAI 2023 paper "[Treasure 
 </div>
 
 ## Requirements
-Python 3.7<br /> 
+```
+CUDA 10.1
+Python 3.7.0
 Pytorch 1.8.0
+CuDNN 8.0.5
+```
+We highly recommend using our environment, which can be downloaded from [Google Drive](https://drive.google.com/file/d/1vAEyFrJ_wLiLwNJfBTg6J-wC9CbzCLmn/view?usp=sharing).
 
 ## Usage
 
